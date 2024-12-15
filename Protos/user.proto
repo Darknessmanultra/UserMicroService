@@ -1,0 +1,64 @@
+syntax = "proto3";
+option csharp_namespace = "UserProto";
+package user;
+service UserService
+{
+    rpc profile(GetByRUT) returns (UserResponse);
+    rpc updateProfile(UpdateUser) returns (Empty);
+    rpc GetMyProgress(Empty) returns (Empty);
+    rpc PatchMyProgress(Empty) returns (Empty);
+    rpc UpdatePassword(ValidateRequest) returns (ValidateResponse);
+    rpc CreateUser(CreateUserRequest) returns (Empty);
+}
+message Empty{}
+message User
+{
+    string Name=1;
+    string FirstLastName=2;
+    string SecondLastName=3;
+    string RUT=4;
+    string Email=5;
+    string HashedPassword=6;
+    bool IsEnabled=7;
+    int32 CareerId=8;
+    int32 RoleId=9;
+}
+message CreateUserRequest
+{
+    string Name=1;
+    string FirstLastName=2;
+    string SecondLastName=3;
+    string RUT=4;
+    string Email=5;
+    string Password=6;
+    string ConfirmPassword=7;
+    int32 CareerId=8;
+}
+message GetByRUT
+{
+    string RUT=1;
+}
+message UserResponse
+{
+    string Name=1;
+    string FirstLastName=2;
+    string SecondLastName=3;
+    string RUT=4;
+    string Email=5;
+    int32 CareerId=6;
+}
+message UpdateUser
+{
+    string Name=1;
+    string FirstLastName=2;
+    string SecondLastName=3;
+}
+message ValidateRequest
+{
+    string email=1;
+    string password=2;
+}
+message ValidateResponse
+{
+    bool is_valid =1;
+}

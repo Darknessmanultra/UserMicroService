@@ -1,0 +1,117 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\s\\segundo semestre 2024\\arquitectura de sistemas\\Taller2\\GestionUsuarios\\GestionUsuarios\\GestionUsuarios.csproj": {}
+  },
+  "projects": {
+    "D:\\s\\segundo semestre 2024\\arquitectura de sistemas\\Taller2\\GestionUsuarios\\GestionUsuarios\\GestionUsuarios.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\s\\segundo semestre 2024\\arquitectura de sistemas\\Taller2\\GestionUsuarios\\GestionUsuarios\\GestionUsuarios.csproj",
+        "projectName": "GestionUsuarios",
+        "projectPath": "D:\\s\\segundo semestre 2024\\arquitectura de sistemas\\Taller2\\GestionUsuarios\\GestionUsuarios\\GestionUsuarios.csproj",
+        "packagesPath": "C:\\Users\\ivans\\.nuget\\packages\\",
+        "outputPath": "D:\\s\\segundo semestre 2024\\arquitectura de sistemas\\Taller2\\GestionUsuarios\\GestionUsuarios\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ivans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.29.1, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.67.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.68.1, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.3.3, )"
+            },
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.3.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
