@@ -52,6 +52,7 @@ message UpdateUser
     string Name=1;
     string FirstLastName=2;
     string SecondLastName=3;
+    string RUT=4;
 }
 message ValidateRequest
 {

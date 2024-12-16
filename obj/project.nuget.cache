@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IFPUXknYozJeZiQcP4GCbQDZiTHJfOBoOGsop9/m2arALnInhW/2RANf4T/h5XBQdzWeZTqA9LLnDZXTg03fXA==",
+  "dgSpecHash": "uYgC9GMONENNeUruiCtaeLDSPoiusDmJYCJlQ7YIwX8AlXXYxAx9LLT3h210HYcLnKWzzmJiewmBiXGthQj0nQ==",
   "success": true,
   "projectFilePath": "D:\\s\\segundo semestre 2024\\arquitectura de sistemas\\Taller2\\GestionUsuarios\\GestionUsuarios\\GestionUsuarios.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ivans\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\ivans\\.nuget\\packages\\google.protobuf\\3.29.1\\google.protobuf.3.29.1.nupkg.sha512",
     "C:\\Users\\ivans\\.nuget\\packages\\grpc.aspnetcore\\2.67.0\\grpc.aspnetcore.2.67.0.nupkg.sha512",
     "C:\\Users\\ivans\\.nuget\\packages\\grpc.aspnetcore.server\\2.67.0\\grpc.aspnetcore.server.2.67.0.nupkg.sha512",

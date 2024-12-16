@@ -56,6 +56,8 @@ namespace UserProto {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::UserProto.ValidateRequest> __Marshaller_user_ValidateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserProto.ValidateRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::UserProto.ValidateResponse> __Marshaller_user_ValidateResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserProto.ValidateResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::UserProto.CreateUserRequest> __Marshaller_user_CreateUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserProto.CreateUserRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -91,12 +93,12 @@ namespace UserProto {
         __Marshaller_user_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::UserProto.ValidateRequest, global::UserProto.Empty> __Method_UpdatePassword = new grpc::Method<global::UserProto.ValidateRequest, global::UserProto.Empty>(
+    static readonly grpc::Method<global::UserProto.ValidateRequest, global::UserProto.ValidateResponse> __Method_UpdatePassword = new grpc::Method<global::UserProto.ValidateRequest, global::UserProto.ValidateResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdatePassword",
         __Marshaller_user_ValidateRequest,
-        __Marshaller_user_Empty);
+        __Marshaller_user_ValidateResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::UserProto.CreateUserRequest, global::UserProto.Empty> __Method_CreateUser = new grpc::Method<global::UserProto.CreateUserRequest, global::UserProto.Empty>(
@@ -141,7 +143,7 @@ namespace UserProto {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::UserProto.Empty> UpdatePassword(global::UserProto.ValidateRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::UserProto.ValidateResponse> UpdatePassword(global::UserProto.ValidateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -179,7 +181,7 @@ namespace UserProto {
       serviceBinder.AddMethod(__Method_updateProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserProto.UpdateUser, global::UserProto.Empty>(serviceImpl.updateProfile));
       serviceBinder.AddMethod(__Method_GetMyProgress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserProto.Empty, global::UserProto.Empty>(serviceImpl.GetMyProgress));
       serviceBinder.AddMethod(__Method_PatchMyProgress, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserProto.Empty, global::UserProto.Empty>(serviceImpl.PatchMyProgress));
-      serviceBinder.AddMethod(__Method_UpdatePassword, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserProto.ValidateRequest, global::UserProto.Empty>(serviceImpl.UpdatePassword));
+      serviceBinder.AddMethod(__Method_UpdatePassword, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserProto.ValidateRequest, global::UserProto.ValidateResponse>(serviceImpl.UpdatePassword));
       serviceBinder.AddMethod(__Method_CreateUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserProto.CreateUserRequest, global::UserProto.Empty>(serviceImpl.CreateUser));
     }
 

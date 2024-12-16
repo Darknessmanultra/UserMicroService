@@ -134,3 +134,4 @@ D:\s\segundo semestre 2024\arquitectura de sistemas\Taller2\GestionUsuarios\Gest
 D:\s\segundo semestre 2024\arquitectura de sistemas\Taller2\GestionUsuarios\GestionUsuarios\obj\Debug\net8.0\GestionUsuarios.pdb
 D:\s\segundo semestre 2024\arquitectura de sistemas\Taller2\GestionUsuarios\GestionUsuarios\obj\Debug\net8.0\GestionUsuarios.genruntimeconfig.cache
 D:\s\segundo semestre 2024\arquitectura de sistemas\Taller2\GestionUsuarios\GestionUsuarios\obj\Debug\net8.0\ref\GestionUsuarios.dll
+D:\s\segundo semestre 2024\arquitectura de sistemas\Taller2\GestionUsuarios\GestionUsuarios\obj\Debug\net8.0\GestionUsuarios.sourcelink.json
