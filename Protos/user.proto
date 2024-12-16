@@ -4,11 +4,11 @@ package user;
 service UserService
 {
     rpc profile(GetByRUT) returns (UserResponse);
-    rpc updateProfile(UpdateUser) returns (Empty);
+    rpc updateProfile(UpdateUser) returns (UpdateUserResponse);
     rpc GetMyProgress(Empty) returns (Empty);
     rpc PatchMyProgress(Empty) returns (Empty);
     rpc UpdatePassword(ValidateRequest) returns (ValidateResponse);
-    rpc CreateUser(CreateUserRequest) returns (Empty);
+    rpc CreateUser(CreateUserRequest) returns (User);
 }
 message Empty{}
 message User
@@ -53,6 +53,10 @@ message UpdateUser
     string FirstLastName=2;
     string SecondLastName=3;
     string RUT=4;
+}
+message UpdateUserResponse
+{
+    bool is_valid=1;
 }
 message ValidateRequest
 {

@@ -32,7 +32,7 @@ namespace GestionUsuarios.Services
             };
         }
 
-        public override async Task<Empty> updateProfile(UpdateUser request, ServerCallContext context)
+        public override async Task<UpdateUserResponse> updateProfile(UpdateUser request, ServerCallContext context)
         {
             var entity= await _context.Users.FirstOrDefaultAsync(u=>u.RUT==request.RUT);
             if(entity==null) throw new RpcException(new Status(StatusCode.NotFound,"Perfil no encontrado"));
@@ -41,7 +41,7 @@ namespace GestionUsuarios.Services
             entity.SecondLastName=request.SecondLastName;
             _context.Users.Update(entity);
             await _context.SaveChangesAsync();
-            return new Empty{};
+            return new UpdateUserResponse{is_valid=true};
         }
 
         public override async Task<ValidateResponse> UpdatePassword(ValidateRequest request,ServerCallContext context)
@@ -57,12 +57,10 @@ namespace GestionUsuarios.Services
             };
         }
 
-        public override async Task<Empty> CreateUser(CreateUserRequest request,ServerCallContext context)
+        public override async Task<User> CreateUser(CreateUserRequest request,ServerCallContext context)
         {
             if(request.Password!=request.ConfirmPassword||await _context.Users.FirstOrDefaultAsync(u=> u.RUT==request.RUT)!=null||await _context.Users.FirstOrDefaultAsync(u=> u.Email==request.Email)!=null)
-            {
-                return new Empty {};
-            }
+            throw new RpcException(new Status(StatusCode.AlreadyExists,"Mala peticion"));
             var entity = new UserEntity
             {
                 Name=request.Name,
@@ -75,12 +73,22 @@ namespace GestionUsuarios.Services
             };
             _context.Users.Add(entity);
             await _context.SaveChangesAsync();
-            return new Empty{};
+            return new User
+            {
+                Name=request.Name,
+                FirstLastName=request.FirstLastName,
+                SecondLastName=request.SecondLastName,
+                RUT=request.RUT,
+                Email=request.Email,
+                HashedPassword=BCrypt.Net.BCrypt.HashPassword(request.Password),
+                IsEnabled=true,
+                CareerId=request.CareerId
+            };
         }
 
         public override async Task<Empty> GetMyProgress(Empty request,ServerCallContext context)
         {
-            
+
         }
 
         public override async Task<Empty> PatchMyProgress(Empty request,ServerCallContext context)

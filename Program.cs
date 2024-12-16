@@ -1,5 +1,6 @@
 using GestionUsuarios.Services;
 using GestionUsuarios.Data;
+using GestionUsuarios.Helpers;
 using Microsoft.EntityFrameworkCore;
 using MassTransit;
 
@@ -17,13 +18,13 @@ builder.Services.AddMassTransit(x =>
             h.Username("guest");
             h.Password("guest");
         });
-        cfg.ReceiveEndpoint("password_queue", e =>
+        cfg.ReceiveEndpoint("user_queue", e =>
         {
             e.ConfigureConsumer<PasswordValidationConsumer>(context);
         });
-        cfg.ReceiveEndpoint("auth_queue", e =>
+        cfg.ReceiveEndpoint("password_queue", e =>
         {
-            e.ConfigureConsumer<PasswordValidationConsumer>(context);
+            e.ConfigureConsumer<AuthConsumer>(context);
         });
     });
 
